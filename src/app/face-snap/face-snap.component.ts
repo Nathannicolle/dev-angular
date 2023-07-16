@@ -16,4 +16,25 @@ export class FaceSnapComponent implements OnInit {
     faceSnap1.setSnaps(0);
     faceSnap1.setIsSnapped(false);
   }
+
+  // Listeners
+  onSnapClick() {
+    if(this.isSnapped === false) {
+      this.onAddSnap();
+    } else {
+      this.onRemoveSnap();
+    }
+  }
+
+  onAddSnap() {
+    this.snaps++;
+    this.isSnapped=true;
+    this.txtButton="Unsnap 😭 !";
+  }
+
+  onRemoveSnap() {
+    this.snaps--;
+    this.isSnapped=false;
+    this.txtButton="Snap it 😃 !";
+  }
 }
