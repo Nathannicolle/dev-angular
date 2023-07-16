@@ -11,6 +11,7 @@ export class FaceSnapComponent implements OnInit {
   creationDate!: Date;
   snaps!: number;
   imageURL!:string;
+  isSnapped!: boolean;
 
   ngOnInit() {
     this.title = "A day as a dev!";
@@ -18,5 +19,24 @@ export class FaceSnapComponent implements OnInit {
     this.creationDate = new Date();
     this.snaps = 3;
     this.imageURL = "/assets/img/bg_site_pro_mini.jpg";
+    this.isSnapped = false;
+  }
+
+  onSnapClick() {
+    if(this.isSnapped === false) {
+      this.onAddSnap();
+    } else {
+      this.onRemoveSnap();
+    }
+  }
+
+  onAddSnap() {
+    this.snaps++;
+    this.isSnapped=true;
+  }
+
+  onRemoveSnap() {
+    this.snaps--;
+    this.isSnapped=false;
   }
 }
