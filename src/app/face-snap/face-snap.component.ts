@@ -12,6 +12,7 @@ export class FaceSnapComponent implements OnInit {
   snaps!: number;
   imageURL!:string;
   isSnapped!: boolean;
+  txtButton!: string;
 
   ngOnInit() {
     this.title = "A day as a dev!";
@@ -20,6 +21,7 @@ export class FaceSnapComponent implements OnInit {
     this.snaps = 3;
     this.imageURL = "/assets/img/bg_site_pro_mini.jpg";
     this.isSnapped = false;
+    this.txtButton = "Snap it 😃 !";
   }
 
   onSnapClick() {
@@ -33,10 +35,12 @@ export class FaceSnapComponent implements OnInit {
   onAddSnap() {
     this.snaps++;
     this.isSnapped=true;
+    this.txtButton="Unsnap 😭 !";
   }
 
   onRemoveSnap() {
     this.snaps--;
     this.isSnapped=false;
+    this.txtButton="Snap it 😃 !";
   }
 }
