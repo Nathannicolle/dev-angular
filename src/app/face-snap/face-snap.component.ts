@@ -29,7 +29,7 @@ export class FaceSnapComponent implements OnInit {
 
   // Listeners
   onSnapClick() {
-    if(this.isSnapped === false) {
+    if(!this.isSnapped) {
       this.onAddSnap();
     } else {
       this.onRemoveSnap();
@@ -37,13 +37,13 @@ export class FaceSnapComponent implements OnInit {
   }
 
   onAddSnap() {
-    this.snaps++;
+    this.faceSnap.snaps++;
     this.isSnapped=true;
     this.txtButton="Unsnap 😭 !";
   }
 
   onRemoveSnap() {
-    this.snaps--;
+    this.faceSnap.snaps--;
     this.isSnapped=false;
     this.txtButton="Snap it 😃 !";
   }
