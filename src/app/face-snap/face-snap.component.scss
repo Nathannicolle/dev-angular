@@ -26,3 +26,13 @@ $radius-snap-card: 20px;
     border-radius: $radius-snap-card;
   }
 }
+
+.snapped {
+  background: lightgreen;
+  color: darkgreen;
+
+  button {
+    background: lightgreen;
+    color: darkgreen;
+  }
+}
