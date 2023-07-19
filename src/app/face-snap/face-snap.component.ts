@@ -18,11 +18,6 @@ export class FaceSnapComponent implements OnInit {
   txtButton!: string;
 
   ngOnInit() {
-    this.title = "A day as a dev!";
-    this.description = "That's fascinating !";
-    this.creationDate = new Date();
-    this.snaps = 3;
-    this.imageURL = "/assets/img/bg_site_pro_mini.jpg";
     this.isSnapped = false;
     this.txtButton = "Snap it 😃 !";
   }

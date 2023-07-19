@@ -9,6 +9,7 @@ import {FaceSnap} from "./models/face-snap.model";
 export class AppComponent implements OnInit {
   faceSnap!: FaceSnap;
   faceSnap2!: FaceSnap;
+  faceSnap3!: FaceSnap
 
   ngOnInit() {
     this.faceSnap = new FaceSnap(
@@ -23,6 +24,13 @@ export class AppComponent implements OnInit {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
       new Date(),
       3);
+    this.faceSnap3 = new FaceSnap(
+      "A wonderful app!",
+      "That's my first Angular App !",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
+      new Date(),
+      3,
+      "Miami");
   }
 }
 
