@@ -5,5 +5,5 @@
   <p>Date de publication : {{faceSnap.creationDate}}</p>
   <button (click)="onSnapClick()">{{txtButton}}</button>
   <p>👍 Snaps : {{faceSnap.snaps}}</p>
-  <p>Localisation : {{faceSnap.location}}</p>
+  <p *ngIf="faceSnap.location">📍Localisation : {{faceSnap.location}}</p>
 </div>
