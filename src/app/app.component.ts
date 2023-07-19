@@ -12,25 +12,28 @@ export class AppComponent implements OnInit {
   faceSnap3!: FaceSnap
 
   ngOnInit() {
-    this.faceSnap = new FaceSnap(
-      "A day as a dev!",
-      "That's fascinating !",
-      "/assets/img/bg_site_pro_mini.jpg",
-      new Date(),
-      3);
-    this.faceSnap2 = new FaceSnap(
-      "A wonderful app!",
-      "That's my first Angular App !",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
-      new Date(),
-      3);
-    this.faceSnap3 = new FaceSnap(
-      "A wonderful app!",
-      "That's my first Angular App !",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
-      new Date(),
-      3,
-      "Miami");
+    this.faceSnap = {
+      title: "A day as a dev!",
+      description: "That's fascinating !",
+      imageURL: "/assets/img/bg_site_pro_mini.jpg",
+      creationDate: new Date(),
+      snaps:3
+    }
+    this.faceSnap2 = {
+      title: "A wonderful app!",
+      description: "That's my first Angular App !",
+      imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
+      creationDate: new Date(),
+      snaps:3
+    }
+    this.faceSnap3 = {
+      title: "A wonderful app!",
+      description: "That's my first Angular App !",
+      imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png",
+      creationDate: new Date(),
+      snaps: 3,
+      location: "Miami"
+    }
   }
 }
 
