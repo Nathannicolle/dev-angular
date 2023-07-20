@@ -45,23 +45,23 @@ export class FaceSnapService {
     return this.faceSnaps;
   }
 
-  snapFaceSnapById(id: number): void {
+  getFaceSnapById(id : number) : FaceSnap {
     this.faceSnaps.forEach((faceSnap) => {
       if (faceSnap.id === id && faceSnap) {
-        faceSnap.snaps++;
-      } else if(!faceSnap) {
-        throw new Error("Le FaceSnap n'existe pas !");
+        return faceSnap;
+      } else {
+        return new Error("Le FaceSnap n'existe pas !");
       }
     });
+
+    throw new Error("Erreur lors de la récupération du FaceSnap !");
+  }
+
+  snapFaceSnapById(id: number): void {
+    this.getFaceSnapById(id).snaps++;
   }
 
   unSnapFaceSnapById(id: number): void {
-    this.faceSnaps.forEach((faceSnap) => {
-      if (faceSnap.id === id && faceSnap) {
-        faceSnap.snaps--;
-      } else if(!faceSnap) {
-        throw new Error("Le FaceSnap n'existe pas !");
-      }
-    });
+    this.getFaceSnapById(id).snaps--;
   }
 }
